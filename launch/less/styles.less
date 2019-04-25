@@ -12,6 +12,7 @@
 @colorbackground: #ffffff;
 
 
+
 @font-face{
     font-family: 'gt-walsheim-medium';
     src: url('../fonts/gt-walsheim-medium.ttf')
@@ -27,10 +28,24 @@
     src: url('../fonts/gt-walsheim-light.ttf')
 }
 
+@font-face{
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.ttf')
+}
 
-@fontmenu:'gt-walsheim-medium', sans-serif;
-@fontheader: 'gt-walsheim-bold', sans-serif;
-@fontprimary: 'gt-walsheim-light', sans-serif;
+@font-face{
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.ttf')
+}
+@font-face{
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf')
+}
+
+
+@fontmenu:'Poppins-Medium', sans-serif;
+@fontheader: 'Poppins-Bold', sans-serif;
+@fontprimary: 'Poppins-Regular', sans-serif;
 
 
 /* - - - - - - - - - - CSS RESET / BETTER BOX MODEL - - - - - - - - - - */
@@ -512,13 +527,17 @@ h2 {
 /* - - - - - - - - - - SECTIONS - - - - - - - - - - */
 
 .intro{
-      background-image:url(../img/behonestsplashpage.png) ;
+      background-image:url(../img/behonestsplashpage.png);
      -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+    background-repeat:no-repeat;
+background-position:center;
     text-transform: uppercase;
     color:#ffffff;
     height:100%;   
+     max-width: 100%;
+
 }
 
 
@@ -642,9 +661,10 @@ box-shadow: 4px 4px 5px 0px rgba(240,168,221,1);
 /* - - - - - - - - - - GOOD MARKET - - - - - - - - - - */
 
 #goodmarket {
-    background-color: @colorbackground;
+    background-color: #2bcffc;
     width: 100%;
     padding-bottom: 50px;
+
 }
 
 

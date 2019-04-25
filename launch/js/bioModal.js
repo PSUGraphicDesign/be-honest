@@ -11,9 +11,9 @@ const $modalComponent = $('#modalComponent')
 const $triggerWrapper = $('#triggerWrapper')
 
 const gradeColor = {
-  senior: '#FFb13A',
-  junior: '#FEFF3A',
-  sophomore: '#FF1838',
+  senior: '#10b9ee',
+  junior: '#fdbd2d',
+  sophomore: '#fec3e9',
 }
 
 // Helper function to sort names alphabetically

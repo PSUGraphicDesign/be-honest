@@ -1,15 +1,16 @@
 /* - - - - - - - - - - VARIABLES - - - - - - - - - - */
 @color0: #fcfcfc;
 @color1: #666;
-@color2: #FFB13A;
+@color2: #10b9ee;
 @color2background: rgba(233,50,141,0.1);
-@color3: #FEFF3A;
+@color3: #fdbd2d;
 @color3background: rgba(0, 0, 0, 0.1);
 @color4: black;
 @color5: #000;
-@color6: #ff1838;
+@color6: #fec3e9;
 @color5background: rgba(70,92,197,0.1);
 @colorbackground: #ffffff;
+
 
 
 @font-face{
@@ -27,10 +28,24 @@
     src: url('../fonts/gt-walsheim-light.ttf')
 }
 
+@font-face{
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.ttf')
+}
 
-@fontmenu:'gt-walsheim-medium', sans-serif;
-@fontheader: 'gt-walsheim-bold', sans-serif;
-@fontprimary: 'gt-walsheim-light', sans-serif;
+@font-face{
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.ttf')
+}
+@font-face{
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf')
+}
+
+
+@fontmenu:'Poppins-Medium', sans-serif;
+@fontheader: 'Poppins-Bold', sans-serif;
+@fontprimary: 'Poppins-Regular', sans-serif;
 
 
 /* - - - - - - - - - - CSS RESET / BETTER BOX MODEL - - - - - - - - - - */
@@ -48,6 +63,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 html {
     width: 100%;
     height: 100%;
+    font-size:1rem;
 }
 
 body {
@@ -55,7 +71,7 @@ body {
     height: 100%;
     background-color: @colorbackground;
     margin: 0px;
-    background-image:url("../img/behonest-background-01.png");
+//    background-image:url("../img/behonest-background-01.png");
     background-repeat: repeat;
 }
 
@@ -76,7 +92,8 @@ img {
 }
 
 section{
-    padding-top: 30px;
+    padding-top: 20px;
+   
 }
 
 .centertext {
@@ -166,7 +183,7 @@ h1, h2, h3, h4, h5 {
 
 h2 {
     font-size: 4em;
-    color: #ff1838;
+    color: @color3;
     margin-left: -3px;
     margin-bottom: .4em;
     font-weight: 300;
@@ -206,6 +223,7 @@ h4 {
 
 nav {
     background-color: #f7f7f7;
+    opacity:0.7;
     z-index: 1;
     position: fixed;
     margin: auto;
@@ -510,10 +528,89 @@ h2 {
 
 /* - - - - - - - - - - SECTIONS - - - - - - - - - - */
 
-#info {
-    background-color: @colorbackground;
-    width: 100%;
+.intro{
+      background-image:url(../img/behonestsplashpage.png);
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+    background-repeat:no-repeat;
+background-position:center;
+    text-transform: uppercase;
+    color:#ffffff;
+    height:100%;   
+     max-width: 100%;
+
 }
+
+
+.intro div{
+    margin-top:7%;
+     text-align:center;
+    
+}
+.intro  .bold-text{
+    font-size:2rem;
+  font-family: 'gt-walsheim-bold';
+    line-height:2.2rem;
+
+}
+.intro p:last-of-type{
+    font-size:1rem;
+    line-height:1.2rem;
+    margin-top:5%;
+
+}
+.intro a{
+    color:#ffffff;
+}
+.intro button{
+    background-color:#ffffff;
+     border:none;
+    padding:10px 50px;
+    margin-top:5%;
+-webkit-box-shadow: 7px 7px 5px 0px rgba(240,168,221,1);
+-moz-box-shadow:  7px 7px 5px 0px rgba(240,168,221,1);
+box-shadow:  7px 7px 5px 0px rgba(240,168,221,1);
+  border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.intro button:hover{
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(240,168,221,1);
+-moz-box-shadow: 4px 4px 5px 0px rgba(240,168,221,1);
+box-shadow: 4px 4px 5px 0px rgba(240,168,221,1);
+    
+}
+ button:focus {outline:0;}
+.intro button:active{
+    box-shadow:none;
+      background-color:#ffffff;
+   
+    
+}
+.intro a button {
+       color:#fdc5ee;
+    font-size:1.2rem;
+      font-family: 'gt-walsheim-bold';
+    
+}
+.intro img{
+     width: 100%;
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+
+#info .panelistsouter{
+ background-color: @colorbackground;
+    width: 100%;
+    background-image: url('../img/DSC_39702.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
 
 
 .imgbg3 {
@@ -523,11 +620,14 @@ h2 {
     
     p {
         padding-left: 20px;
+        margin-bottom:10%;
     }
     
     img{
         width:100%;
-        border: 15px solid black;
+        margin-bottom:10%;
+//        border:10px solid #fdbd2d;
+       
     }
 }
 
@@ -544,7 +644,7 @@ h2 {
 
 .imgbg2 img {
         
-    border: 15px solid black;
+    border: 10px solid #eb6259;;
     background-repeat: no-repeat;
     background-size: cover; 
     padding: 0px;
@@ -568,24 +668,36 @@ h2 {
 /* - - - - - - - - - - GOOD MARKET - - - - - - - - - - */
 
 #goodmarket {
-    background-color: @colorbackground;
+    background-color:#2bcffc;
+       width: 100%;
+    background-image: url('../img/DSC_39702.png');
+    background-size:cover;
+    background-repeat:no-repeat;
     width: 100%;
     padding-bottom: 50px;
-}
+    
 
+}
+#goodmarket p{
+    color:#ffffff;
+margin-bottom:50px;
+}
+#goodmarket h2{
+    color:#ffffff;
+}
 
 /* - - - - - - - - - - PANELISTS - - - - - - - - - - */
 
-hr{
-    border: none;
-    height: 3px;
-    margin: 0;
-    color: #333;
-    background-color: #333;
-    width: 150%;
-    position: relative;
-    left: -27%;
-}
+//hr{
+//    border: none;
+//    height: 3px;
+//    margin: 0;
+//    color: #333;
+//    background-color: #333;
+//    width: 150%;
+//    position: relative;
+//    left: -27%;
+//}
 
 #a_conversation {
     width: 100%;
@@ -596,7 +708,7 @@ hr{
     margin-top:82px;
     padding-top: 50px;
     margin-bottom: 5%;
-    border-top: 3px solid black;
+//    border-top: 3px solid black;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -772,7 +884,8 @@ hr{
 
 .partipantname {
     font-family: @fontprimary;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    padding-bottom:1%;
 }
 
 h4.allstudentsclick {
@@ -785,7 +898,7 @@ h4.allstudentsclick {
 /* - - - - - - - - - - SENIORS - - - - - - - - - - */
 
 .senior {
-    border: @color2 6px solid;
+border: @color2 6px solid;
     
     a:link {
     color: @color5;
@@ -805,11 +918,17 @@ h4.allstudentsclick {
     cursor: pointer;
     text-decoration: none;
     }
-    
+    .partipantname{
+//        border-bottom: @color2 5px solid;
+    }
     .partipantname:hover {
     cursor: pointer;
-    border-bottom: @color2 5px solid;
+//    border-bottom: @color1 5px solid;
+        
     }
+}
+.senior:hover{
+    background-color:@color2;
 }
 
 h4.seniorsclick {
@@ -821,7 +940,7 @@ h4.seniorsclick {
 /* - - - - - - - - - - JUNIORS - - - - - - - - - - */
 
 .junior {
-    border: @color3 6px solid;
+ border: @color3 6px solid;
     
     a:link {
     color: @color5;
@@ -841,11 +960,18 @@ h4.seniorsclick {
     cursor: pointer;
     text-decoration: none;
     }
-    
+    .partipantname{
+//          border-bottom: @color3 5px solid;
+    }
     .partipantname:hover {
     cursor: pointer;
-    border-bottom: @color3 5px solid;
+//    border-bottom: @color1 5px solid;
+      
+        
     }
+}
+.junior:hover{
+      background-color:@color3;
 }
 
 h4.juniorsclick {
@@ -857,7 +983,7 @@ h4.juniorsclick {
 /* - - - - - - - - - - SOPHOMORES - - - - - - - - - - */
 
 .sophomore {
-    border: @color6 6px solid;
+border: @color6 6px solid;
     
     a:link {
     color: @color5;
@@ -878,11 +1004,17 @@ h4.juniorsclick {
     cursor: pointer;
     text-decoration: none;
     }
-    
+    .partipantname{
+//          border-bottom: @color6 5px solid;
+    }
     .partipantname:hover {
     cursor: pointer;
-    border-bottom: @color6 5px solid;
+//    border-bottom: @color1 5px solid;
+       
     }
+}
+.sophomore:hover{
+     background-color:@color6;
 }
 
 h4.sophomoresclick {
@@ -1086,12 +1218,23 @@ a svg:hover {
 
 
 @media screen and (max-width : 800px) {
+     #goodmarket {
+    background-color:#2bcffc;
+        background-image: none;
+       
+    }
+    
     
     body {
         overflow-x: hidden;
         background: white;
     }
-    
+    body p{
+          padding:0% 7%;
+    }
+    body h2{
+        padding:0% 7%;
+    }
     section{
         padding-top: 2%;
     }
@@ -1348,6 +1491,10 @@ a svg:hover {
 /* - - - - - - - - - - RESPONSIVE TABLET - - - - - - - - - - */
 
 @media screen and (min-width : 801px) and (max-width : 992px) {
+    #goodmarket {
+    background-color:#2bcffc;
+        background-image: none;
+    }
     
     .tablet {
     display: inline;
@@ -1602,8 +1749,9 @@ a svg:hover {
       background-color: #fff;
       width: 90vw;
       max-width: 375px;
-      border: 7px solid;
+//      border: 7px solid;
      position: relative;
+
 }
 
 .artist-bio{
@@ -1627,10 +1775,10 @@ a svg:hover {
 
 #modalComponent div {
   background-color: rgba(255,255,255, 1);
-  height: 200px;
-  padding: 1em 4em 0;
+  height: 300px;
+  padding: 1.4em 4em 0;
   text-align: center;
-  border-top: solid 3px black;
+//  border-top: solid 3px black;
     overflow-x: scroll;
 }
 
@@ -1639,7 +1787,7 @@ a svg:hover {
 }
 
 #modalComponent a{
-    font-size: 1.4em;
+    font-size: 1.6em;
     letter-spacing: 1px;
     color: black;
     margin-bottom: 3%;
