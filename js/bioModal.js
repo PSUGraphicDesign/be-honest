@@ -31,7 +31,10 @@ const getArtistsInfo = () => {
   return $.ajax({
     type: "GET",
 //     url: "js/data.csv",
-    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLMTIgkC0SuLJ1ed4ksIvLZrxlIt1AAf-8kTCTu8tCLaFzZH8wf2Xj3cZM3NFLOjsTCrczRiuHxAru/pub?gid=755615192&single=true&output=csv",
+      // https://docs.google.com/spreadsheets/d/e/2PACX-1vRpT_VMq1ISrTYBqq-BGYuntQLtixdUDnOQjLCG-Zjw974JapjpZs3keJbg5rSzk2NtkCUuKTaaKgDX/pub?output=csv
+      
+      
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSaPsz3nOUye8UWZFIqJhdqLD-yydqF1eqFFR3p63kPnBEnuO1ghm_ZRUjwEFleUll8h4W57TosXITX/pub?output=csv",
     success: data => {
       const arrData = $.csv.toObjects(data)
       console.log('arrData.length', arrData.length)

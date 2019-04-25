@@ -617,6 +617,7 @@ box-shadow: 4px 4px 5px 0px rgba(240,168,221,1);
     font-size: 0.8em;
     text-align: left;
     float: right;
+    margin-bottom:7%;
     
     p {
         padding-left: 20px;
@@ -926,6 +927,9 @@ border: @color2 6px solid;
 //    border-bottom: @color1 5px solid;
         
     }
+    #modalComponent {
+         background-color:@color2;
+    }
 }
 .senior:hover{
     background-color:@color2;
@@ -1028,16 +1032,20 @@ h4.sophomoresclick {
 /* - - - - - - - - - - SPONSORS - - - - - - - - - - */
 
 #sponsors {
-    background-color: @color5;
+    background-color: @color6;
     width: 100%;
     margin-top: 50px;
+}
+#sponsors h3{
+    margin-bottom:0px;
+    padding-bottom:0px;
 }
 
 .sponsors {
     margin: auto;
-    margin-top: 20px;
     text-align: center;
 }
+
 
 .sponsorinner {
     margin: 0 7%;
@@ -1122,10 +1130,10 @@ h4.sophomoresclick {
 /* - - - - - - - - - - FOOTER - - - - - - - - - - */
 
 footer {
-    background-color: @color5;
+    background-color: @color6;
     
     .footerbg {
-    background-color: black;
+    background-color: @color6;
     margin-bottom: 0px;
     width: 100%;
     padding: 0px;
@@ -1170,8 +1178,12 @@ footer {
             width: 45px;
         }
     }
+  
 }
 
+.footerbg a{
+        color:#fff;
+    }
 #logo_black, #Twitter, #Instagram, #Facebook, #Google_ {
     fill: @colorbackground;
 }
